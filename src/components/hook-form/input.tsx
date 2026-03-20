@@ -1,3 +1,4 @@
+import { colors } from "@/src/constants/colors";
 import React, { useState } from "react";
 import { StyleSheet, Text, TextInput, View } from "react-native";
 
@@ -36,10 +37,8 @@ const Input = ({
           error && styles.errorBorder,
         ]}
       >
-        {/* Left Icon */}
         {leftIcon && <View style={styles.iconLeft}>{leftIcon}</View>}
 
-        {/* Input */}
         <TextInput
           value={value}
           onChangeText={onChangeText}
@@ -53,11 +52,9 @@ const Input = ({
           style={styles.input}
         />
 
-        {/* Right Icon */}
         {rightIcon && <View style={styles.iconRight}>{rightIcon}</View>}
       </View>
 
-      {/* Error */}
       {error && <Text style={styles.errorText}>{error}</Text>}
     </View>
   );
@@ -69,13 +66,13 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     alignItems: "center",
-    borderWidth: 1,
-    borderColor: "#ccc",
+    borderBottomWidth: 1.5,
+    borderColor: colors.neutral.s400,
     borderRadius: 10,
     paddingHorizontal: 10,
   },
   focused: {
-    borderColor: "#007AFF",
+    borderColor: colors.primary.brand,
   },
   errorBorder: {
     borderColor: "red",
