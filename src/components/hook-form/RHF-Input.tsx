@@ -1,13 +1,13 @@
 import React from "react";
-import { Controller, FieldValues, Path, useFormContext } from "react-hook-form";
+import { Controller, useFormContext } from "react-hook-form";
 import Input, { InputProps } from "./input";
 
-type Props<T extends FieldValues> = InputProps & {
-  name: Path<T>; // 🔥 strong typing for field names
+type Props = InputProps & {
+  name: string; // ✅ no generic here
 };
 
-const RHFInput = <T extends FieldValues>({ name, ...other }: Props<T>) => {
-  const { control } = useFormContext<T>();
+const RHFInput: React.FC<Props> = ({ name, ...other }) => {
+  const { control } = useFormContext(); // ✅ no generic
 
   return (
     <Controller
@@ -16,10 +16,10 @@ const RHFInput = <T extends FieldValues>({ name, ...other }: Props<T>) => {
       render={({ field, fieldState }) => (
         <Input
           {...other}
-          value={field.value ?? ""} // ✅ avoid undefined crash
-          onChangeText={field.onChange} // ✅ RN mapping
+          value={field.value ?? ""}
+          onChangeText={field.onChange}
           onBlur={field.onBlur}
-          error={fieldState.error?.message} // ✅ error handling
+          error={fieldState.error?.message}
         />
       )}
     />

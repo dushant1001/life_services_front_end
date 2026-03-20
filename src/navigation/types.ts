@@ -1,4 +1,5 @@
 import { NavigatorScreenParams } from "@react-navigation/native";
+import { Routes } from "./constants";
 
 export type BottomTabParamList = {
   Home: undefined;
@@ -9,11 +10,10 @@ export type BottomTabParamList = {
 export type MainStackParamList = {
   Tabs: NavigatorScreenParams<BottomTabParamList>;
 };
-
 export type AuthStackParamList = {
-  Login: undefined;
-  Signup: undefined;
-  ForgetPassword: undefined;
-  VerifyOtp: undefined;
-  ResetPassword: undefined;
+  [Routes.LOGIN]: undefined;
+  [Routes.SIGNUP]: undefined;
+  [Routes.FORGET_PASSWORD]: undefined;
+  [Routes.VERIFY_OTP]: undefined;
+  [Routes.RESET_PASSWORD]: undefined;
 };
