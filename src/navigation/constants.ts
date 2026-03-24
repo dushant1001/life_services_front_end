@@ -5,8 +5,8 @@ export enum Routes {
   VERIFY_OTP = "VerifyOtp",
   RESET_PASSWORD = "ResetPassword",
 
-  TABS = "Tabs",
-  HOME = "Home",
-  FAV = "Fav",
-  PROFILE = "Profile",
+  Home = "Home",
+  Activity = "Activity",
+  History = "History",
+  Profile = "Profile",
 }

@@ -9,7 +9,7 @@ type IconType = "ion" | "material" | "feather" | "ant";
 
 type Props = {
   type?: IconType;
-  name: string; // ✅ fixed (no 'any')
+  name: string;
   size?: number;
   color?: string;
 };

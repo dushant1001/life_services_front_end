@@ -25,7 +25,7 @@ export const colors = {
 
   secondary: {
     main: "#036352",
-    light: "#49433A",
+    light: "#b5d3cd",
   },
 
   card: {

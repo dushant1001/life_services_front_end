@@ -39,7 +39,6 @@ const Button: React.FC<ButtonProps> = ({
     </>
   );
 
-  // ✅ Gradient Button
   if (isGradient) {
     return (
       <TouchableOpacity
@@ -49,7 +48,7 @@ const Button: React.FC<ButtonProps> = ({
         style={disabled && styles.disabled}
       >
         <LinearGradient
-          colors={colors.gradients.primary as [string, string]} // ✅ FIXED
+          colors={colors.gradients.primary as unknown as [string, string]}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
           style={[styles.button, style]}
@@ -60,7 +59,6 @@ const Button: React.FC<ButtonProps> = ({
     );
   }
 
-  // ✅ Normal Button
   return (
     <TouchableOpacity
       style={[
