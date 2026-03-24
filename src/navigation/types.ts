@@ -2,9 +2,10 @@ import { NavigatorScreenParams } from "@react-navigation/native";
 import { Routes } from "./constants";
 
 export type BottomTabParamList = {
-  Home: undefined;
-  Fav: undefined;
-  Profile: undefined;
+  [Routes.Home]: undefined;
+  [Routes.Activity]: undefined;
+  [Routes.History]: undefined;
+  [Routes.Profile]: undefined;
 };
 
 export type MainStackParamList = {

@@ -1,10 +1,10 @@
 import { Text, View } from "react-native";
 import { ScaledSheet } from "react-native-size-matters";
 
-export default function ProfileScreen() {
+export default function SettingScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Profile Screen</Text>
+      <Text style={styles.text}>Setting Screen</Text>
     </View>
   );
 }

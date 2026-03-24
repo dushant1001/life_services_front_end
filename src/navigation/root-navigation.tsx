@@ -1,5 +1,5 @@
-import AuthStack from "./AuthStack";
+import MainStack from "./MainStack";
 
 export default function RootNavigation() {
-  return <AuthStack />;
+  return <MainStack />;
 }
